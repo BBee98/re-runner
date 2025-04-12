@@ -21,8 +21,17 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true,},
       ],
+        "no-const-assign": ["error"],
+        "no-dupe-key": ["error"],
+        "no-empty-pattern": ["error"],
+        "no-irregular-whitespace": ["error"],
+        "no-template-curly-in-string": ["error"],
+        "no-unreachable": ["error"],
+        "no-unused-vars": ["error"],
+        "no-new": ["error"],
+        "prefer-template": ["error"],
     },
   },
 )
