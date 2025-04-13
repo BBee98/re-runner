@@ -1,0 +1,32 @@
+.section {
+    &.s8x {
+        padding: var(--s8px);
+    }
+    &.s16x {
+        padding: var(--s16px);
+    }
+    &.s24x {
+        padding: var(--s24px);
+    }
+    &.s32x {
+        padding: var(--s32px);
+    }
+    &.s40x {
+        padding: var(--s40px);
+    }
+    &.s48x {
+        padding: var(--s48px);
+    }
+    &.s56x {
+        padding: var(--s56px);
+    }
+    &.s64x {
+        padding: var(--s64px);
+    }
+    &.s72x {
+        padding: var(--s72px);
+    }
+    &.s80x {
+        padding: var(--s80px);
+    }
+}

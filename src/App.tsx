@@ -1,9 +1,12 @@
 import './index.css'
+import {Section} from "./components/section";
 
 function App() {
 
   return (
-    <h1> Welcome to ReRunner</h1>
+     <Section>
+
+     </Section>
   )
 }
 

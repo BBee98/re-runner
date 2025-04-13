@@ -1,56 +1,43 @@
-# React + TypeScript + Vite
+# Instalaciones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Conversor de vídeo => ffmepg
 
-Currently, two official plugins are available:
+- Instalar ffmepg desde Homebrew con ``brew install ffmpeg --build-from-source``
+- Después, indicar los encoders que se desean instalar con: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+brew install libvpx libvorbis x264
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Podemos verificar que la instalación ha ido bien con este comando:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
-# re-runner
-# re-runner
+   ffmpeg -encoders | grep libvpx
+```
+
+Nos aparecerá una lista como esta:
+
+```
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+ V....D libvpx               libvpx VP8 (codec vp8)
+ V....D libvpx-vp9           libvpx VP9 (codec vp9)
+```
+
+Si te aparecen estas líneas:
+
+```
+ V....D libvpx               libvpx VP8 (codec vp8)
+ V....D libvpx-vp9           libvpx VP9 (codec vp9)
+```
+
+Significa que habrás instalado satisfactoriamente el encoder que permite
+cambiar el formato de vídeo a .webm
+
+Esa ``V`` que precede significa que tiene formato **Vídeo**

@@ -1,0 +1,1 @@
+export type Sizes = 's8px' | 's16px' | 's24px' | 's32px' | 's40px' | 's48px' | 's56px' | 's64px' | 's72px' | 's80px';
