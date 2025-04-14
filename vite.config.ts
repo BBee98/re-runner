@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@icons': '/src/assets/icons',
+      '@videos': '/src/assets/videos',
     }
   },
   plugins: [react()],

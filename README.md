@@ -41,3 +41,12 @@ Significa que habrás instalado satisfactoriamente el encoder que permite
 cambiar el formato de vídeo a .webm
 
 Esa ``V`` que precede significa que tiene formato **Vídeo**
+
+
+# Desarrollo
+
+## ¿Cómo no perjudicar la performance de tu aplicación web al añadir vídeos?
+
+```Documentación
+    https://web.dev/learn/performance/video-performance?hl=es-419
+```

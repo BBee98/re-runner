@@ -1,0 +1,23 @@
+.props {
+    --position: static;
+
+    --padding-top: 0;
+    --padding-right: 0;
+    --padding-bottom: 0;
+    --padding-left: 0;
+
+    --margin-top: 0;
+    --margin-right: 0;
+    --margin-bottom: 0;
+    --margin-left: 0;
+
+    --width: auto;
+    --height: auto;
+
+    position: var(--position);
+    padding: var(--padding-top, var(--padding-right, var(--padding-bottom, var(--padding-left, 0px))));
+    margin: var(--margin-top, var(--margin-right, var(--margin-bottom, var(--margin-left, 0px))));
+
+    height: var(--height);
+    width: var(--width);
+}
