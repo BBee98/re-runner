@@ -1,20 +1,13 @@
 import './index.css'
 import {Section} from "./components/section";
-import {Video} from "./components/video";
-import {Container} from "./components/container";
-
-import mainVideo from "@videos/e-commerce-1.webm";
-import fallbackVideos from "@videos/e-commerce-1.mp4";
+import {MainVideoComponent} from "./pages/components/main-video";
 
 function App() {
 
   return (
      <Section>
-         <Container>
-             <Video mainVideo={mainVideo} fallbackVideos={[fallbackVideos]} />
-             <p className={styles.slogan}></p>
-         </Container>
-     </Section>
+             <MainVideoComponent />
+      </Section>
   )
 }
 

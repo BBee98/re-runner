@@ -8,6 +8,7 @@ export default defineConfig({
     alias: {
       '@icons': '/src/assets/icons',
       '@videos': '/src/assets/videos',
+      '@showcase': '/src/assets/showcase',
     }
   },
   plugins: [react()],

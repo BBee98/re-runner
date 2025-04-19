@@ -3,7 +3,7 @@ import {useEffect} from "react";
 
 import styles from './styles.module.css';
 
-export const Video = ({mainVideo, fallbackVideos}: Videos) => {
+export const Video = ({className, mainVideo, fallbackVideos}: Videos) => {
 
     useEffect(() => {
         const format = getFormat(mainVideo)
@@ -19,7 +19,7 @@ export const Video = ({mainVideo, fallbackVideos}: Videos) => {
         return video.split('.').pop();
     }
 
-    return (<video className={styles.wrapper} autoPlay loop muted >
+    return (<video className={`${styles.wrapper} ${className}`} autoPlay loop muted >
                 <source className={styles.source} src={mainVideo} type={`video/${getFormat(mainVideo)}`} />
                 { fallbackVideos.map((video: string, index: number) => <source key={`v-${index}-ec`}
                                                                                src={video}

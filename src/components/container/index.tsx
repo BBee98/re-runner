@@ -1,5 +1,6 @@
-import {ComponentCSSProps, ComposeComponent} from "../Component-composer.tsx";
+import {ComposeComponent} from "../Component-composer.tsx";
 import {ReactNode} from "react";
+import {ComponentCSSProps} from "../../types/types.ts";
 
 type ContainerProps = {
     props?: ComponentCSSProps;
@@ -7,9 +8,8 @@ type ContainerProps = {
 }
 
 export const Container   = ({props, children}: ContainerProps) => {
-
-    return (<ComposeComponent {...props}>
-        <div>{ children }</div>
+    return (<ComposeComponent {...props} as="div">
+        { children }
     </ComposeComponent>)
 }
 
